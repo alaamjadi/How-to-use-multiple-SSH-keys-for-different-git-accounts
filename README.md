@@ -27,6 +27,10 @@ all cached keys can be deleted before
 
     $ ssh-add -D
 
+If you get the following error:
+__**Could not open a connection to your authentication agent.**__
+
+
 add these two keys as following
 
     $ ssh-add ~/.ssh/github-github_user_name
