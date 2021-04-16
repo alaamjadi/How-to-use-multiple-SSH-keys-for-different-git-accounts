@@ -28,8 +28,11 @@ all cached keys can be deleted before
     $ ssh-add -D
 
 If you get the following error:
-__**Could not open a connection to your authentication agent.**__
+**"Could not open a connection to your authentication agent."**
 
+Try this:
+
+    $ eval "$(ssh-agent)"
 
 add these two keys as following
 
@@ -109,6 +112,13 @@ then use normal flow to push the code
     $ git commit -m "your comments"
     $ git push
 
+Check your SSH connection (extra)
+---------------------------------
+If you want to connect to your machine via SSH, you can be sure that your ISP or router does not block this protocol and its port by using the following:
+
+    $ ssh -T git@github.com
+
+For more use [Testing your SSH connection by GitHub](https://docs.github.com/en/github/authenticating-to-github/testing-your-ssh-connection)
 ## Credits
 This is a customized version of [Multiple SSH Keys settings for different GitHub account](https://gist.github.com/jexchan/2351996) documented by [jexchan](https://gist.github.com/jexchan)
 
